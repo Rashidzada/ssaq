@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Skills Academy Qalagay | Learn Smart, Build Future!</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts (Inter & Cabinet Grotesk style setup) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Beautiful Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom styling & configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        academyBlue: {
+                            50: '#f0f4fe',
+                            100: '#dee7fc',
+                            500: '#1d4ed8',
+                            900: '#0f172a',
+                        },
+                        academyRed: {
+                            500: '#dc2626',
+                            600: '#b91c1c',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glow-effect {
+            box-shadow: 0 0 15px rgba(29, 78, 216, 0.15);
+        }
+        .text-glow {
+            text-shadow: 0 0 10px rgba(220, 38, 38, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans antialiased selection:bg-academyBlue-500 selection:text-white">
+
+    <!-- TOP NOTIFICATION & CONTACT BAR -->
+    <div class="bg-gradient-to-r from-academyBlue-900 via-blue-900 to-academyRed-600 text-white text-xs md:text-sm py-2 px-4 sticky top-0 z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center gap-4">
+                <span class="inline-flex items-center bg-red-600 text-white px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider animate-pulse">
+                    Course Offer Limited
+                </span>
+                <span class="font-medium text-slate-100 hidden md:inline">🎓 AI & CIT Admissions Open for 2026 Batch!</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="tel:0347-0983567" class="hover:text-red-300 transition-colors flex items-center gap-1.5 font-semibold">
+                    <i class="fa-solid fa-phone text-xs"></i> 0347-0983567
+                </a>
+                <span class="text-slate-400">|</span>
+                <a href="https://wa.me/923115252698" target="_blank" class="hover:text-green-300 transition-colors flex items-center gap-1.5 font-semibold">
+                    <i class="fa-brands fa-whatsapp text-xs text-green-400"></i> 0311-5252698
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN NAV HEADER -->
+    <header class="bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100 sticky top-[36px] md:top-[40px] z-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo resembling the emblem in banner -->
+            <div class="flex items-center gap-3">
+                <div class="relative flex-shrink-0 w-12 h-12 bg-gradient-to-tr from-academyBlue-900 to-academyBlue-500 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-md border-2 border-white">
+                    <!-- SVG Emblem Layout -->
+                    <svg class="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                    </svg>
+                    <!-- Outer ring effect -->
+                    <div class="absolute -inset-1 rounded-full border border-blue-200 animate-ping opacity-10"></div>
+                </div>
+                <div>
+                    <span class="block font-black text-xl md:text-2xl tracking-tight text-academyBlue-900 uppercase">
+                        SMART SKILLS
+                    </span>
+                    <span class="block text-[11px] font-bold tracking-widest text-academyRed-500 uppercase -mt-1.5">
+                        ACADEMY QALAGAY
+                    </span>
+                </div>
+            </div>
+
+            <!-- Navigation Links -->
+            <nav class="hidden lg:flex items-center gap-8 text-[15px] font-semibold text-slate-600">
+                <a href="#about" class="hover:text-academyBlue-500 transition-colors">About</a>
+                <a href="#courses" class="hover:text-academyBlue-500 transition-colors">Our Courses</a>
+                <a href="#durations" class="hover:text-academyBlue-500 transition-colors">Duration</a>
+                <a href="#why-choose-us" class="hover:text-academyBlue-500 transition-colors">Why Choose Us?</a>
+                <a href="#verify-certificate" class="hover:text-academyBlue-500 transition-colors flex items-center gap-1 text-academyRed-500"><i class="fa-solid fa-circle-check"></i> Certificate Verification</a>
+            </nav>
+
+            <!-- CTA Actions -->
+            <div class="flex items-center gap-3">
+                <a href="#contact" class="hidden sm:inline-flex items-center justify-center px-4 py-2 border border-slate-200 rounded-xl text-sm font-semibold text-slate-700 hover:bg-slate-50 transition-all">
+                    Find Location
+                </a>
+                <button onclick="openEnrollmentModal()" class="inline-flex items-center justify-center px-5 py-2.5 bg-gradient-to-r from-academyRed-500 to-red-600 text-white font-bold rounded-xl text-sm hover:from-academyRed-600 hover:to-red-700 transition-all duration-200 shadow-md shadow-red-200 hover:-translate-y-0.5">
+                    Enroll Now <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative overflow-hidden bg-gradient-to-b from-slate-100 via-white to-slate-50 py-16 lg:py-24">
+        <!-- Abstract background accents -->
+        <div class="absolute inset-y-0 right-0 w-1/2 bg-blue-50/40 rounded-l-[150px] transform translate-x-32 -z-10 blur-3xl"></div>
+        <div class="absolute top-1/2 left-10 w-48 h-48 bg-red-100/30 rounded-full -z-10 blur-2xl"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                <!-- Text Area -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-academyBlue-50 border border-academyBlue-100 rounded-full text-xs md:text-sm text-academyBlue-500 font-bold tracking-wide uppercase">
+                        <i class="fa-solid fa-brain animate-bounce text-academyRed-500"></i> AI Future Ready Skills For You!
+                    </div>
+                    
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-academyBlue-900 leading-[1.15] tracking-tight">
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-academyBlue-900 to-blue-700 block">SMART SKILLS</span>
+                        <span class="text-academyRed-500 block">ACADEMY QALAGAY</span>
+                    </h1>
+
+                    <p class="text-lg md:text-xl font-bold text-slate-600 tracking-wide">
+                        "Learn Smart, Build Future!"
+                    </p>
+
+                    <p class="text-slate-600 text-base md:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                        Equip yourself with the most demanded career skills of 2026. From essential IT administration and English fluency to practical Artificial Intelligence tools. Discover the fast-track to professional growth.
+                    </p>
+
+                    <!-- Bullet Badges aligned to bottom banner headers -->
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-4">
+                        <div class="flex items-center justify-center lg:justify-start gap-2 p-2.5 bg-white border border-slate-100 rounded-xl shadow-sm">
+                            <i class="fa-solid fa-user-tie text-academyBlue-500"></i>
+                            <span class="text-xs font-bold text-slate-700">Expert Instructors</span>
+                        </div>
+                        <div class="flex items-center justify-center lg:justify-start gap-2 p-2.5 bg-white border border-slate-100 rounded-xl shadow-sm">
+                            <i class="fa-solid fa-laptop-code text-academyBlue-500"></i>
+                            <span class="text-xs font-bold text-slate-700">Practical Learning</span>
+                        </div>
+                        <div class="flex items-center justify-center lg:justify-start gap-2 p-2.5 bg-white border border-slate-100 rounded-xl shadow-sm">
+                            <i class="fa-solid fa-award text-academyBlue-500"></i>
+                            <span class="text-xs font-bold text-slate-700">Certificates Issued</span>
+                        </div>
+                        <div class="flex items-center justify-center lg:justify-start gap-2 p-2.5 bg-white border border-slate-100 rounded-xl shadow-sm">
+                            <i class="fa-solid fa-rocket text-academyBlue-500"></i>
+                            <span class="text-xs font-bold text-slate-700">Bright Future</span>
+                        </div>
+                    </div>
+
+                    <!-- Direct Quick Connects -->
+                    <div class="flex flex-col sm:flex-row items-center gap-4 pt-6">
+                        <button onclick="openEnrollmentModal()" class="w-full sm:w-auto px-8 py-4 bg-academyBlue-900 hover:bg-slate-800 text-white font-bold rounded-2xl shadow-lg shadow-blue-900/10 transition-all flex items-center justify-center gap-3">
+                            <i class="fa-regular fa-paper-plane"></i> Apply for Summer Cohort
+                        </button>
+                        <a href="https://wa.me/923470983567?text=Hello%20Smart%20Skills%20Academy%20Qalagay%2C%20I%20am%20interested%20in%20enrolling%20in%20a%20course." target="_blank" class="w-full sm:w-auto px-8 py-4 bg-green-500 hover:bg-green-600 text-white font-bold rounded-2xl shadow-lg shadow-green-400/20 transition-all flex items-center justify-center gap-3">
+                            <i class="fa-brands fa-whatsapp text-lg"></i> Direct Chat on WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Banner Feature Graphic Box (AI & CIT Showcase) -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-[400px] lg:max-w-none">
+                        <!-- Background glow elements -->
+                        <div class="absolute -inset-1.5 bg-gradient-to-tr from-academyRed-500 to-academyBlue-500 rounded-3xl blur opacity-20 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
+                        
+                        <!-- Main Graphic Panel -->
+                        <div class="relative bg-white border border-slate-200/80 rounded-3xl p-6 md:p-8 shadow-2xl space-y-6">
+                            <!-- Course Offer Banner Card -->
+                            <div class="bg-gradient-to-br from-red-500 to-academyRed-600 rounded-2xl p-4 text-white relative overflow-hidden">
+                                <div class="absolute top-0 right-0 p-4 transform translate-x-4 -translate-y-4 opacity-10">
+                                    <i class="fa-solid fa-gift text-9xl"></i>
+                                </div>
+                                <span class="bg-white/20 text-white px-2.5 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase">SPECIAL PROMOTION</span>
+                                <h3 class="text-xl font-extrabold mt-2 text-white">100% FREE AI COURSE</h3>
+                                <p class="text-xs text-red-100 mt-1">Get certified in productivity tools, ChatGPT, and AI workflow automation at no additional cost!</p>
+                            </div>
+
+                            <!-- Mockup computer screen CIT Graphic -->
+                            <div class="bg-slate-900 rounded-2xl p-4 text-white font-mono text-[11px] shadow-inner relative overflow-hidden border border-slate-800">
+                                <div class="flex items-center justify-between border-b border-slate-800 pb-2 mb-3">
+                                    <div class="flex gap-1">
+                                        <span class="w-2.5 h-2.5 bg-red-500 rounded-full inline-block"></span>
+                                        <span class="w-2.5 h-2.5 bg-yellow-500 rounded-full inline-block"></span>
+                                        <span class="w-2.5 h-2.5 bg-green-500 rounded-full inline-block"></span>
+                                    </div>
+                                    <span class="text-slate-500 text-[10px]">smartskills-portal.sh</span>
+                                    <i class="fa-solid fa-terminal text-slate-500 text-xs"></i>
+                                </div>
+                                <div class="space-y-1.5">
+                                    <p class="text-green-400"># Initializing Academy CIT Program...</p>
+                                    <p class="text-slate-300">$ load_module --course="Computer CIT"</p>
+                                    <p class="text-blue-400">&gt; Windows, MS Office, Typing Skills: ACTIVE</p>
+                                    <p class="text-slate-300">$ run_module --course="Artificial Intelligence"</p>
+                                    <p class="text-purple-400">&gt; ChatGPT, AI Productivity Tools: READY</p>
+                                    <div class="pt-2 flex justify-between items-center text-slate-500 border-t border-slate-800/80 mt-2">
+                                        <span>Capacity: 85% full</span>
+                                        <span class="text-emerald-400 font-bold animate-pulse">● System Online</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Banner verification statement in bottom graphic -->
+                            <div class="flex items-center gap-3 p-3 bg-blue-50/60 rounded-xl border border-blue-100">
+                                <div class="w-10 h-10 bg-academyBlue-500 text-white rounded-lg flex items-center justify-center text-lg flex-shrink-0">
+                                    <i class="fa-solid fa-award"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xs font-black text-academyBlue-900 uppercase">3-Month Professional Certification</h4>
+                                    <p class="text-[11px] text-slate-500 leading-normal">Includes rigorous continuous grading, practical project submission, and verified badges.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COURSES SECTION -->
+    <section id="courses" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <span class="text-sm font-bold text-academyRed-500 tracking-widest uppercase">Transformative Training</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-academyBlue-900 tracking-tight">Our Professional Courses</h2>
+                <div class="w-24 h-1 bg-academyRed-500 mx-auto rounded-full"></div>
+                <p class="text-slate-500 text-sm sm:text-base pt-2">
+                    Check out our highly structured, beginner-friendly curriculums. Designed from the bottom up to prepare you for global work environments.
+                </p>
+            </div>
+
+            <!-- Tabs/Selector for quick switching -->
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- COURSE 1: COMPUTER CIT -->
+                <div class="bg-slate-50 rounded-3xl p-8 border border-slate-200/80 flex flex-col justify-between hover:shadow-xl hover:border-blue-200 transition-all duration-300 group relative">
+                    <div class="absolute top-0 right-0 transform translate-x-1.5 -translate-y-1.5 w-12 h-12 bg-academyBlue-100 rounded-full flex items-center justify-center text-academyBlue-500 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <i class="fa-solid fa-desktop text-sm"></i>
+                    </div>
+                    <div>
+                        <div class="w-14 h-14 bg-academyBlue-900 text-white rounded-2xl flex items-center justify-center text-2xl shadow-md mb-6">
+                            <i class="fa-solid fa-laptop"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-academyBlue-900">Computer CIT</h3>
+                        <p class="text-xs font-semibold text-academyBlue-500 uppercase tracking-widest mt-1">Foundation Program</p>
+                        <p class="text-slate-500 text-sm mt-4 mb-6 leading-relaxed">
+                            Master the core building blocks of Information Technology. Perfect for beginners and aspiring administrative professionals.
+                        </p>
+                        
+                        <!-- Core Syllabus List -->
+                        <div class="space-y-3.5 border-t border-slate-200/80 pt-6">
+                            <h4 class="text-xs font-black uppercase text-slate-400 tracking-wider">What you will learn:</h4>
+                            <div class="flex items-start gap-3">
+                                <span class="w-5 h-5 rounded-full bg-blue-100 text-academyBlue-500 flex items-center justify-center text-xs flex-shrink-0 mt-0.5 font-bold">1</span>
+                                <span class="text-sm font-semibold text-slate-700">Basic to Advance IT Concepts</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="w-5 h-5 rounded-full bg-blue-100 text-academyBlue-500 flex items-center justify-center text-xs flex-shrink-0 mt-0.5 font-bold">2</span>
+                                <span class="text-sm font-semibold text-slate-700">Windows & File Management</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="w-5 h-5 rounded-full bg-blue-100 text-academyBlue-500 flex items-center justify-center text-xs flex-shrink-0 mt-0.5 font-bold">3</span>
+                                <span class="text-sm font-semibold text-slate-700">MS Office Tools Suite</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="w-5 h-5 rounded-full bg-blue-100 text-academyBlue-500 flex items-center justify-center text-xs flex-shrink-0 mt-0.5 font-bold">4</span>
+                                <span class="text-sm font-semibold text-slate-700">Internet & Email Utilities</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="w-5 h-5 rounded-full bg-blue-100 text-academyBlue-500 flex items-center justify-center text-xs flex-shrink-0 mt-0.5 font-bold">5</span>
+                                <span class="text-sm font-semibold text-slate-700">Typing Skills & Accuracy Training</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="pt-8 mt-6 border-t border-slate-200/80">
+                        <button onclick="openEnrollmentModal('Computer CIT')" class="w-full py-3 bg-white hover:bg-academyBlue-900 border border-slate-200 hover:border-academyBlue-900 text-slate-700 hover:text-white font-bold rounded-xl transition-all text-sm flex items-center justify-center gap-2">
+                            Enroll in Computer CIT <i class="fa-solid fa-chevron-right text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- COURSE 2: AI COURSE (FREE SPECIAL OFFER) -->
+                <div class="bg-gradient-to-b from-blue-900 to-academyBlue-900 text-white rounded-3xl p-8 border-2 border-academyRed-500 flex flex-col justify-between hover:shadow-2xl hover:shadow-blue-900/20 transition-all duration-300 relative group">
+                    <!-- Special Ribbon / Badge -->
+                    <div class="absolute top-4 right-4 bg-academyRed-500 text-white text-[10px] font-black tracking-widest px-3 py-1 rounded-full uppercase animate-bounce shadow">
+                        FREE COURSE OFFER
+                    </div>
+                    
+                    <div>
+                        <div class="w-14 h-14 bg-academyRed-500 text-white rounded-2xl flex items-center justify-center text-2xl shadow-md mb-6">
+                            <i class="fa-solid fa-brain"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">AI Course <span class="text-academyRed-500 font-extrabold">(FREE)</span></h3>
+                        <p class="text-xs font-semibold text-blue-300 uppercase tracking-widest mt-1">Special Productivity Module</p>
+                        <p class="text-slate-300 text-sm mt-4 mb-6 leading-relaxed">
+                            Revolutionize the way you work, study, and research. Learn to unlock advanced AI modules completely for free alongside key studies.
+                        </p>
+                        
+                        <!-- AI Syllabus List -->
+                        <div class="space-y-3.5 border-t border-blue-800/80 pt-6">
+                            <h4 class="text-xs font-black uppercase text-blue-300 tracking-wider">What you will learn:</h4>
+                            <div class="flex items-start gap-3">
+                                <span class="w-5 h-5 rounded-full bg-red-600/30 text-red-300 flex items-center justify-center text-xs flex-shrink-0 mt-0.5 font-bold">1</span>
+                                <span class="text-sm font-semibold text-slate-100">Introduction to AI Fundamentals</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="w-5 h-5 rounded-full bg-red-600/30 text-red-300 flex items-center justify-center text-xs flex-shrink-0 mt-0.5 font-bold">2</span>
+                                <span class="text-sm font-semibold text-slate-100">AI Tools for Fast Productivity</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="w-5 h-5 rounded-full bg-red-600/30 text-red-300 flex items-center justify-center text-xs flex-shrink-0 mt-0.5 font-bold">3</span>
+                                <span class="text-sm font-semibold text-slate-100">ChatGPT & Advanced Prompting Basics</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="w-5 h-5 rounded-full bg-red-600/30 text-red-300 flex items-center justify-center text-xs flex-shrink-0 mt-0.5 font-bold">4</span>
+                                <span class="text-sm font-semibold text-slate-100">AI Application in Real Life Workflows</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="w-5 h-5 rounded-full bg-red-600/30 text-red-300 flex items-center justify-center text-xs flex-shrink-0 mt-0.5 font-bold">5</span>
+                                <span class="text-sm font-semibold text-slate-100">Build Smarter, Work Faster Techniques</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="pt-8 mt-6 border-t border-blue-800/80">
+                        <button onclick="openEnrollmentModal('AI Course')" class="w-full py-3 bg-academyRed-500 hover:bg-academyRed-600 text-white font-bold rounded-xl transition-all text-sm flex items-center justify-center gap-2 shadow-lg shadow-red-900/20">
+                            Claim Free Seat Now <i class="fa-solid fa-chevron-right text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- COURSE 3: ENGLISH LANGUAGE -->
+                <div class="bg-slate-50 rounded-3xl p-8 border border-slate-200/80 flex flex-col justify-between hover:shadow-xl hover:border-blue-200 transition-all duration-300 group relative">
+                    <div class="absolute top-0 right-0 transform translate-x-1.5 -translate-y-1.5 w-12 h-12 bg-academyBlue-100 rounded-full flex items-center justify-center text-academyBlue-500 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <i class="fa-solid fa-comments text-sm"></i>
+                    </div>
+                    <div>
+                        <div class="w-14 h-14 bg-academyBlue-900 text-white rounded-2xl flex items-center justify-center text-2xl shadow-md mb-6">
+                            <i class="fa-solid fa-language"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-academyBlue-900">English Language</h3>
+                        <p class="text-xs font-semibold text-academyBlue-500 uppercase tracking-widest mt-1">Fluency Program</p>
+                        <p class="text-slate-500 text-sm mt-4 mb-6 leading-relaxed">
+                            Acquire professional command over reading, listening, writing, and presentation. Gain the absolute confidence to converse smoothly.
+                        </p>
+                        
+                        <!-- English Syllabus List -->
+                        <div class="space-y-3.5 border-t border-slate-200/80 pt-6">
+                            <h4 class="text-xs font-black uppercase text-slate-400 tracking-wider">What you will learn:</h4>
+                            <div class="flex items-start gap-3">
+                                <span class="w-5 h-5 rounded-full bg-blue-100 text-academyBlue-500 flex items-center justify-center text-xs flex-shrink-0 mt-0.5 font-bold">1</span>
+                                <span class="text-sm font-semibold text-slate-700">Spoken English Development</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="w-5 h-5 rounded-full bg-blue-100 text-academyBlue-500 flex items-center justify-center text-xs flex-shrink-0 mt-0.5 font-bold">2</span>
+                                <span class="text-sm font-semibold text-slate-700">Communication & Presentation Skills</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="w-5 h-5 rounded-full bg-blue-100 text-academyBlue-500 flex items-center justify-center text-xs flex-shrink-0 mt-0.5 font-bold">3</span>
+                                <span class="text-sm font-semibold text-slate-700">Grammar & Writing Excellence</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="w-5 h-5 rounded-full bg-blue-100 text-academyBlue-500 flex items-center justify-center text-xs flex-shrink-0 mt-0.5 font-bold">4</span>
+                                <span class="text-sm font-semibold text-slate-700">Fluency & Conversation Confidence</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="pt-8 mt-6 border-t border-slate-200/80">
+                        <button onclick="openEnrollmentModal('English Language')" class="w-full py-3 bg-white hover:bg-academyBlue-900 border border-slate-200 hover:border-academyBlue-900 text-slate-700 hover:text-white font-bold rounded-xl transition-all text-sm flex items-center justify-center gap-2">
+                            Enroll in English <i class="fa-solid fa-chevron-right text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DURATION & TIMELINE SECTION -->
+    <section id="durations" class="py-20 bg-slate-100 relative overflow-hidden">
+        <div class="absolute inset-0 bg-grid-slate-200 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))] -z-10"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                <!-- Info Grid -->
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="inline-block text-xs font-black text-academyRed-500 tracking-widest uppercase">CLASS ENROLLMENT METRICS</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-academyBlue-900 tracking-tight">Duration & Batch Details</h2>
+                    <p class="text-slate-600 leading-relaxed text-sm sm:text-base">
+                        Our courses are optimized for high-intensity quick learning. Within three months, our systematic practical approach turns complete beginners into skilled digital professionals.
+                    </p>
+
+                    <!-- Banner Key Info cards -->
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm space-y-3">
+                            <div class="w-10 h-10 bg-academyBlue-100 text-academyBlue-900 rounded-xl flex items-center justify-center text-lg">
+                                <i class="fa-solid fa-hourglass-half"></i>
+                            </div>
+                            <h3 class="font-bold text-slate-900">3 Months Course</h3>
+                            <p class="text-xs text-slate-500">Fast, streamlined pathway containing hands-on modules and live testing.</p>
+                        </div>
+
+                        <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm space-y-3">
+                            <div class="w-10 h-10 bg-red-100 text-academyRed-500 rounded-xl flex items-center justify-center text-lg">
+                                <i class="fa-solid fa-user-check"></i>
+                            </div>
+                            <h3 class="font-bold text-slate-900">Certificate Included</h3>
+                            <p class="text-xs text-slate-500">Graduates receive verified physical and digital certificates of skill completion.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Live cohort status panel and dates -->
+                <div class="lg:col-span-6">
+                    <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-xl relative">
+                        <div class="absolute top-4 right-4 bg-red-600 text-white font-extrabold text-[9px] px-2.5 py-1 rounded-full uppercase tracking-wider animate-pulse">
+                            Cohort Status: Active
+                        </div>
+                        
+                        <h3 class="text-lg font-bold text-academyBlue-900 border-b border-slate-100 pb-4">May Cohort Details</h3>
+                        
+                        <!-- Big Banner Date Display -->
+                        <div class="py-6 flex items-center gap-6">
+                            <div class="w-20 h-20 bg-slate-900 text-white rounded-2xl flex flex-col items-center justify-center flex-shrink-0">
+                                <span class="text-2xl font-black">20</span>
+                                <span class="text-[10px] uppercase font-bold text-red-400">MAY 2026</span>
+                            </div>
+                            <div>
+                                <h4 class="text-base font-extrabold text-academyBlue-900">Current Cohort Launch</h4>
+                                <p class="text-xs text-slate-500 mt-1 leading-relaxed">
+                                    Admissions for this program began <span class="font-bold text-slate-800">20th May 2026</span>. Late-entry registrations are currently being accepted on an interview basis for vacant positions.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Cohort Progression bar -->
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-center text-xs font-semibold text-slate-600">
+                                <span>Batch Seat Capacity</span>
+                                <span class="text-academyRed-500">89% Filled (Only 3 seats remaining)</span>
+                            </div>
+                            <div class="w-full bg-slate-100 rounded-full h-3.5 overflow-hidden">
+                                <div class="bg-gradient-to-r from-academyBlue-500 to-academyRed-500 h-full rounded-full" style="width: 89%"></div>
+                            </div>
+                        </div>
+
+                        <!-- Mini timeline of classes -->
+                        <div class="pt-6 mt-6 border-t border-slate-100 grid grid-cols-3 gap-2 text-center">
+                            <div>
+                                <span class="block text-xs text-slate-400">Class Timings</span>
+                                <span class="block text-sm font-extrabold text-slate-800 mt-0.5">Flexible</span>
+                            </div>
+                            <div class="border-x border-slate-100">
+                                <span class="block text-xs text-slate-400">Class Type</span>
+                                <span class="block text-sm font-extrabold text-slate-800 mt-0.5">On-Campus</span>
+                            </div>
+                            <div>
+                                <span class="block text-xs text-slate-400">Practical Lab</span>
+                                <span class="block text-sm font-extrabold text-slate-800 mt-0.5">1:1 PC Access</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE CERTIFICATE LOOKUP SIMULATOR -->
+    <section id="verify-certificate" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-br from-academyBlue-900 via-slate-900 to-blue-950 rounded-[40px] text-white p-8 sm:p-12 shadow-2xl relative overflow-hidden">
+                <!-- Decorative vectors -->
+                <div class="absolute inset-0 opacity-10 pointer-events-none bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-100 via-transparent to-transparent"></div>
+                
+                <div class="grid lg:grid-cols-12 gap-8 items-center relative z-10">
+                    <!-- Text Pitch -->
+                    <div class="lg:col-span-6 space-y-6 text-center lg:text-left">
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-white/10 border border-white/20 rounded-full text-xs font-bold text-red-400 uppercase">
+                            <i class="fa-solid fa-shield-halved"></i> Security Feature
+                        </span>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight">
+                            Digital & Verifiable Skill Credentials
+                        </h2>
+                        <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                            Employers can easily verify our students' credentials online. Test our smart, interactive mockup system. Enter a sample registration number below to generate a valid student badge.
+                        </p>
+                        
+                        <div class="inline-flex items-center gap-3 bg-white/5 border border-white/10 p-3 rounded-xl text-xs text-slate-400">
+                            <i class="fa-solid fa-info-circle text-academyBlue-500"></i>
+                            <span>Use sample code: <strong class="text-white bg-slate-800 px-1.5 py-0.5 rounded">SSA-2026-101</strong> or <strong class="text-white bg-slate-800 px-1.5 py-0.5 rounded">SSA-2026-102</strong></span>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Tool -->
+                    <div class="lg:col-span-6 bg-white/10 backdrop-blur-md rounded-3xl p-6 border border-white/10">
+                        <div class="space-y-4">
+                            <label class="block text-xs font-bold uppercase text-slate-300">Enter Certificate ID</label>
+                            <div class="flex gap-2">
+                                <input id="certIdInput" type="text" placeholder="e.g. SSA-2026-101" class="flex-grow px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-academyRed-500 focus:border-transparent text-sm font-semibold uppercase">
+                                <button onclick="simulateCertificateVerify()" class="px-5 py-3 bg-academyRed-500 hover:bg-academyRed-600 font-bold rounded-xl transition-all text-sm flex items-center gap-2">
+                                    Verify ID
+                                </button>
+                            </div>
+                            
+                            <!-- Display Area -->
+                            <div id="verifyResult" class="mt-6 hidden bg-white text-slate-900 rounded-2xl p-5 border border-slate-100 transition-all">
+                                <div class="flex items-center justify-between border-b border-slate-100 pb-3 mb-3">
+                                    <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full uppercase flex items-center gap-1">
+                                        <i class="fa-solid fa-circle-check"></i> Credential Verified
+                                    </span>
+                                    <span class="text-xs font-mono text-slate-400" id="resultCertId"></span>
+                                </div>
+                                <div class="space-y-2">
+                                    <div class="flex justify-between">
+                                        <span class="text-xs text-slate-400">Student Name:</span>
+                                        <span class="text-sm font-bold text-slate-800" id="resultName"></span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span class="text-xs text-slate-400">Course Pursued:</span>
+                                        <span class="text-sm font-bold text-slate-800" id="resultCourse"></span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span class="text-xs text-slate-400">Date Issued:</span>
+                                        <span class="text-sm font-bold text-slate-800" id="resultDate"></span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span class="text-xs text-slate-400">Status:</span>
+                                        <span class="text-sm font-extrabold text-emerald-600">Graduate - Distinction</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Error Alert (hidden initially) -->
+                            <div id="verifyError" class="mt-6 hidden bg-red-500/10 border border-red-500/20 text-red-200 rounded-2xl p-4 text-xs flex items-center gap-3">
+                                <i class="fa-solid fa-triangle-exclamation text-base"></i>
+                                <span>Verification Code not recognized. Please verify format (e.g., SSA-2026-101).</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section id="why-choose-us" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <span class="text-sm font-bold text-academyRed-500 tracking-widest uppercase">Unmatched Standards</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-academyBlue-900 tracking-tight">Why Choose Smart Skills Academy?</h2>
+                <div class="w-24 h-1 bg-academyRed-500 mx-auto rounded-full"></div>
+            </div>
+
+            <!-- 4-Grid of Advantages matching banner labels -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Point 1 -->
+                <div class="bg-white rounded-3xl p-6 border border-slate-200/80 shadow-sm hover:-translate-y-1 transition-all duration-300">
+                    <div class="w-12 h-12 bg-red-100 text-academyRed-500 rounded-2xl flex items-center justify-center text-xl font-bold mb-6">
+                        <i class="fa-solid fa-chalkboard-user"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-academyBlue-900 leading-tight">Expert & Friendly Instructors</h3>
+                    <p class="text-slate-500 text-xs sm:text-sm mt-3 leading-relaxed">
+                        Learn inside an optimal environment guided by professional mentors willing to solve queries step-by-step.
+                    </p>
+                </div>
+
+                <!-- Point 2 -->
+                <div class="bg-white rounded-3xl p-6 border border-slate-200/80 shadow-sm hover:-translate-y-1 transition-all duration-300">
+                    <div class="w-12 h-12 bg-blue-100 text-academyBlue-500 rounded-2xl flex items-center justify-center text-xl font-bold mb-6">
+                        <i class="fa-solid fa-folder-open"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-academyBlue-900 leading-tight">Practical & Project Based</h3>
+                    <p class="text-slate-500 text-xs sm:text-sm mt-3 leading-relaxed">
+                        Ditch plain theory! Solve real problems, practice digital labs, and work on actual project portfolios.
+                    </p>
+                </div>
+
+                <!-- Point 3 -->
+                <div class="bg-white rounded-3xl p-6 border border-slate-200/80 shadow-sm hover:-translate-y-1 transition-all duration-300">
+                    <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center text-xl font-bold mb-6">
+                        <i class="fa-solid fa-stamp"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-academyBlue-900 leading-tight">Certificate of Completion</h3>
+                    <p class="text-slate-500 text-xs sm:text-sm mt-3 leading-relaxed">
+                        Receive a beautifully framed certification recognized by hiring entities across the province.
+                    </p>
+                </div>
+
+                <!-- Point 4 -->
+                <div class="bg-white rounded-3xl p-6 border border-slate-200/80 shadow-sm hover:-translate-y-1 transition-all duration-300">
+                    <div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-2xl flex items-center justify-center text-xl font-bold mb-6">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-academyBlue-900 leading-tight">100% Skill Development</h3>
+                    <p class="text-slate-500 text-xs sm:text-sm mt-3 leading-relaxed">
+                        Equipped to ensure each active student achieves independent fluency in administrative systems and computer design.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- REALISTIC TESTIMONIALS -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <span class="text-sm font-bold text-academyRed-500 tracking-widest uppercase">SUCCESS STORIES</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-academyBlue-900 tracking-tight">Our Graduates Say</h2>
+                <div class="w-24 h-1 bg-academyRed-500 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Review Card 1 -->
+                <div class="bg-slate-50 p-6 rounded-3xl border border-slate-200/60 relative">
+                    <div class="flex items-center gap-1 text-amber-500 text-sm mb-4">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-slate-600 text-sm italic leading-relaxed">
+                        "The Computer CIT curriculum at Smart Skills Academy is absolutely top tier. Under their supervision, my typing speed rocketed to over 50 WPM. Getting the free AI class option was an insane bonus."
+                    </p>
+                    <div class="mt-6 flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-slate-300 flex items-center justify-center font-bold text-academyBlue-900 text-sm">
+                            SK
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold text-slate-800">Sajid Khan</h4>
+                            <span class="text-[11px] text-slate-400">CIT Graduate, 2026 Batch</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review Card 2 -->
+                <div class="bg-slate-50 p-6 rounded-3xl border border-slate-200/60 relative">
+                    <div class="flex items-center gap-1 text-amber-500 text-sm mb-4">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-slate-600 text-sm italic leading-relaxed">
+                        "As a student looking for jobs, English conversation was my biggest obstacle. The practical communication modules and writing exercises at this academy gave me the power to speak fluently during interviews."
+                    </p>
+                    <div class="mt-6 flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-slate-300 flex items-center justify-center font-bold text-academyBlue-900 text-sm">
+                            AN
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold text-slate-800">Asma Bibi</h4>
+                            <span class="text-[11px] text-slate-400">English Language Alumna</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review Card 3 -->
+                <div class="bg-slate-50 p-6 rounded-3xl border border-slate-200/60 relative">
+                    <div class="flex items-center gap-1 text-amber-500 text-sm mb-4">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-slate-600 text-sm italic leading-relaxed">
+                        "The free AI modules blew my mind. Knowing how to write precise prompts in ChatGPT and utilize AI formatting algorithms saves me hours every single week in my administrative office work."
+                    </p>
+                    <div class="mt-6 flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-slate-300 flex items-center justify-center font-bold text-academyBlue-900 text-sm">
+                            UM
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold text-slate-800">Usman M.</h4>
+                            <span class="text-[11px] text-slate-400">AI Certificate Holder</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT & LOCATION SECTION -->
+    <section id="contact" class="py-20 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-stretch">
+                <!-- Location Cards & Details -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div class="space-y-3">
+                        <span class="text-sm font-bold text-academyRed-500 tracking-widest uppercase">GET IN TOUCH</span>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold text-academyBlue-900 tracking-tight">Visit Our Academy</h2>
+                        <div class="w-20 h-1 bg-academyRed-500 rounded-full"></div>
+                        <p class="text-slate-500 text-xs sm:text-sm pt-2 leading-relaxed">
+                            Feel free to visit during operational class hours to consult with our faculty representatives, view labs, and complete registration setup.
+                        </p>
+                    </div>
+
+                    <!-- Direct Contacts -->
+                    <div class="space-y-4">
+                        <!-- Card 1: Address -->
+                        <div class="bg-white p-5 rounded-2xl border border-slate-200 flex gap-4 items-start">
+                            <div class="w-10 h-10 bg-academyBlue-50 text-academyBlue-900 rounded-xl flex items-center justify-center text-lg flex-shrink-0">
+                                <i class="fa-solid fa-map-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-800 text-sm">Physical Address</h4>
+                                <p class="text-slate-600 text-xs mt-1 font-semibold">Opposite To Nisar Mobile Shop Qalagay</p>
+                                <span class="text-[11px] text-slate-400 mt-1 block">Qalagay Market District, KPK, Pakistan</span>
+                            </div>
+                        </div>
+
+                        <!-- Card 2: Call Admins -->
+                        <div class="bg-white p-5 rounded-2xl border border-slate-200 flex gap-4 items-start">
+                            <div class="w-10 h-10 bg-red-50 text-academyRed-500 rounded-xl flex items-center justify-center text-lg flex-shrink-0">
+                                <i class="fa-solid fa-phone-volume"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-800 text-sm">Admin Help Desk</h4>
+                                <div class="space-y-1 mt-1.5 text-xs">
+                                    <a href="tel:0347-0983567" class="block font-black text-slate-700 hover:text-academyRed-500">
+                                        📲 0347-0983567 (Call / SMS)
+                                    </a>
+                                    <a href="tel:0311-5252698" class="block font-black text-slate-700 hover:text-academyRed-500">
+                                        📲 0311-5252698 (Call / SMS)
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3: Direct WhatsApp Connect -->
+                        <div class="bg-white p-5 rounded-2xl border border-slate-200 flex gap-4 items-start">
+                            <div class="w-10 h-10 bg-emerald-50 text-emerald-600 rounded-xl flex items-center justify-center text-lg flex-shrink-0">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-800 text-sm">Instant WhatsApp Support</h4>
+                                <p class="text-xs text-slate-500 mt-1 leading-relaxed">
+                                    Click below to prompt pre-filled admission chats with our registrars instantly.
+                                </p>
+                                <div class="flex gap-2 mt-3">
+                                    <a href="https://wa.me/923470983567" target="_blank" class="px-3 py-1.5 bg-emerald-500 hover:bg-emerald-600 text-white rounded-lg text-[11px] font-bold transition-all inline-flex items-center gap-1">
+                                        Admin 1 Chat
+                                    </a>
+                                    <a href="https://wa.me/923115252698" target="_blank" class="px-3 py-1.5 bg-emerald-500 hover:bg-emerald-600 text-white rounded-lg text-[11px] font-bold transition-all inline-flex items-center gap-1">
+                                        Admin 2 Chat
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact & Interactive Form Box -->
+                <div class="lg:col-span-7 bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-xl flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <h3 class="text-xl font-bold text-academyBlue-900 border-b border-slate-100 pb-3">Send Admissions Enquiry</h3>
+                        <p class="text-slate-500 text-xs">Complete this simple submission. The system will bundle your requested course and open direct WhatsApp connection to the administration.</p>
+                        
+                        <form id="enquiryForm" class="space-y-4" onsubmit="handleFormSubmit(event)">
+                            <div class="grid sm:grid-cols-2 gap-4">
+                                <div class="space-y-1.5">
+                                    <label class="block text-xs font-bold uppercase text-slate-500">Student Name</label>
+                                    <input required id="formName" type="text" placeholder="e.g. Ali Khan" class="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-academyBlue-500 focus:bg-white text-xs sm:text-sm font-semibold text-slate-700">
+                                </div>
+                                <div class="space-y-1.5">
+                                    <label class="block text-xs font-bold uppercase text-slate-500">Phone Number (WhatsApp)</label>
+                                    <input required id="formPhone" type="tel" placeholder="e.g. 0300-1234567" class="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-academyBlue-500 focus:bg-white text-xs sm:text-sm font-semibold text-slate-700">
+                                </div>
+                            </div>
+
+                            <div class="grid sm:grid-cols-2 gap-4">
+                                <div class="space-y-1.5">
+                                    <label class="block text-xs font-bold uppercase text-slate-500">Select Desired Course</label>
+                                    <select id="formCourse" class="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-academyBlue-500 focus:bg-white text-xs sm:text-sm font-semibold text-slate-700">
+                                        <option value="Computer CIT">Computer CIT Program</option>
+                                        <option value="AI Course">AI Course (FREE Module)</option>
+                                        <option value="English Language">English Language Course</option>
+                                        <option value="All In One Combo">All Courses Combined</option>
+                                    </select>
+                                </div>
+                                <div class="space-y-1.5">
+                                    <label class="block text-xs font-bold uppercase text-slate-500">Preferred Session</label>
+                                    <select id="formSession" class="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-academyBlue-500 focus:bg-white text-xs sm:text-sm font-semibold text-slate-700">
+                                        <option value="Morning">Morning Batch</option>
+                                        <option value="Evening">Evening Batch</option>
+                                        <option value="Flexible Hour">Flexible Lab Booking</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="space-y-1.5">
+                                <label class="block text-xs font-bold uppercase text-slate-500">Short Note / Queries</label>
+                                <textarea id="formMessage" rows="3" placeholder="Tell us if you have prior computer knowledge or specify preferred timing details..." class="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-academyBlue-500 focus:bg-white text-xs sm:text-sm font-semibold text-slate-700"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full py-3 bg-gradient-to-r from-academyRed-500 to-red-600 text-white font-black rounded-xl text-xs sm:text-sm shadow-md hover:opacity-95 transition-all uppercase tracking-wider flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-paper-plane"></i> Submit & Direct Message Admin
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Custom beautiful success popup alert -->
+                    <div id="enquirySuccess" class="hidden mt-6 bg-emerald-50 border border-emerald-200 text-emerald-800 rounded-2xl p-5 space-y-3">
+                        <div class="flex gap-2 items-start">
+                            <i class="fa-solid fa-circle-check text-xl text-emerald-600 mt-0.5"></i>
+                            <div>
+                                <h4 class="font-bold text-sm">Enquiry Prepared Successfully!</h4>
+                                <p class="text-xs text-emerald-700 mt-1">We have generated your customized training sheet format. Click below to chat directly with our registrar to save your seat space.</p>
+                            </div>
+                        </div>
+                        <a id="successWhatsAppBtn" href="#" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-lg text-xs transition-all">
+                            <i class="fa-brands fa-whatsapp text-sm"></i> Send to Registration Desk
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-8 pb-8 border-b border-slate-900">
+                <div class="space-y-4">
+                    <span class="block font-black text-xl text-white tracking-tight uppercase">SMART SKILLS</span>
+                    <p class="text-xs leading-relaxed max-w-xs text-slate-500">
+                        Top ranking computer and technical education provider in Qalagay. Empowering smart strategies and bright futures since 2026.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-white mb-4">Our Programs</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#courses" class="hover:text-white transition-colors">Computer CIT (Basic to Adv)</a></li>
+                        <li><a href="#courses" class="hover:text-white transition-colors">English Spoken & Presentation</a></li>
+                        <li><a href="#courses" class="hover:text-white transition-colors">Productivity AI Suite (FREE)</a></li>
+                        <li><a href="#durations" class="hover:text-white transition-colors">3-Month Accelerated Track</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-white mb-4">Contact Details</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-phone text-academyRed-500"></i> 0347-0983567</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-phone text-academyRed-500"></i> 0311-5252698</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-location-arrow text-academyRed-500"></i> Opp. Nisar Mobile Shop Qalagay</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-600">
+                <p>&copy; 2026 Smart Skills Academy Qalagay. All Rights Reserved.</p>
+                <div class="flex gap-4">
+                    <a href="#about" class="hover:underline">Admissions Policy</a>
+                    <span>•</span>
+                    <a href="#verify-certificate" class="hover:underline text-slate-400">Verifiable Credentials Portal</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ENROLLMENT MODAL OVERLAY -->
+    <div id="enrollmentModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden transition-all duration-300">
+        <div class="bg-white rounded-[32px] w-full max-w-lg overflow-hidden shadow-2xl border border-slate-100 transform scale-95 transition-transform duration-300 relative">
+            
+            <!-- Modal Header -->
+            <div class="bg-gradient-to-r from-academyBlue-900 to-blue-950 p-6 text-white relative">
+                <button onclick="closeEnrollmentModal()" class="absolute top-4 right-4 w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 transition-all flex items-center justify-center text-sm font-bold">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <span class="inline-block bg-academyRed-500 text-white font-black text-[9px] px-2 py-0.5 rounded-full uppercase tracking-widest">Enrollment Panel</span>
+                <h3 class="text-lg font-extrabold mt-1">Smart Skills Registration</h3>
+                <p class="text-xs text-slate-300 mt-1 leading-normal">Select your program. Registration requires instant confirmation with the course administrator.</p>
+            </div>
+
+            <!-- Modal Form Body -->
+            <div class="p-6">
+                <form id="modalForm" class="space-y-4" onsubmit="handleModalSubmit(event)">
+                    <div class="space-y-1">
+                        <label class="block text-xs font-bold uppercase text-slate-500">Your Full Name</label>
+                        <input required id="modalName" type="text" placeholder="e.g. Ali Khan" class="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-academyBlue-500 text-xs sm:text-sm font-semibold text-slate-700">
+                    </div>
+
+                    <div class="space-y-1">
+                        <label class="block text-xs font-bold uppercase text-slate-500">WhatsApp / Call Contact Number</label>
+                        <input required id="modalPhone" type="tel" placeholder="e.g. 0347-0983567" class="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-academyBlue-500 text-xs sm:text-sm font-semibold text-slate-700">
+                    </div>
+
+                    <div class="space-y-1">
+                        <label class="block text-xs font-bold uppercase text-slate-500">Choose Program</label>
+                        <select id="modalCourse" class="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-academyBlue-500 text-xs sm:text-sm font-semibold text-slate-700">
+                            <option value="Computer CIT">Computer CIT Program</option>
+                            <option value="AI Course">AI Course (FREE Module)</option>
+                            <option value="English Language">English Language Course</option>
+                        </select>
+                    </div>
+
+                    <div class="bg-red-50 border border-red-100 rounded-2xl p-4 text-[11px] text-red-800 leading-relaxed flex gap-2">
+                        <i class="fa-solid fa-triangle-exclamation text-base text-red-500 mt-0.5"></i>
+                        <span>By clicking confirm, we will format your text for immediate submission to the admin on WhatsApp (<strong>0347-0983567</strong>).</span>
+                    </div>
+
+                    <button type="submit" class="w-full py-3 bg-gradient-to-r from-academyRed-500 to-red-600 hover:from-academyRed-600 hover:to-red-700 text-white font-black rounded-xl text-xs sm:text-sm shadow-md uppercase tracking-wider flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-lg"></i> Send Secure Application
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Certificate simulator mock database
+        const MOCK_CERT_DATABASE = {
+            "SSA-2026-101": {
+                name: "Hamza Abbasi",
+                course: "Computer CIT (Foundation Class)",
+                date: "May 20, 2026"
+            },
+            "SSA-2026-102": {
+                name: "Zainab Bibi",
+                course: "English Language Fluency",
+                date: "May 18, 2026"
+            }
+        };
+
+        // Certificate search simulator
+        function simulateCertificateVerify() {
+            const input = document.getElementById('certIdInput').value.trim().toUpperCase();
+            const resultBox = document.getElementById('verifyResult');
+            const errorBox = document.getElementById('verifyError');
+            
+            // Clear prior states
+            resultBox.classList.add('hidden');
+            errorBox.classList.add('hidden');
+
+            if (MOCK_CERT_DATABASE[input]) {
+                const data = MOCK_CERT_DATABASE[input];
+                document.getElementById('resultCertId').innerText = input;
+                document.getElementById('resultName').innerText = data.name;
+                document.getElementById('resultCourse').innerText = data.course;
+                document.getElementById('resultDate').innerText = data.date;
+                
+                resultBox.classList.remove('hidden');
+            } else {
+                errorBox.classList.remove('hidden');
+            }
+        }
+
+        // Modal triggers
+        function openEnrollmentModal(preSelectedCourse = '') {
+            const modal = document.getElementById('enrollmentModal');
+            if (preSelectedCourse) {
+                document.getElementById('modalCourse').value = preSelectedCourse;
+            }
+            modal.classList.remove('hidden');
+            modal.classList.remove('pointer-events-none');
+        }
+
+        function closeEnrollmentModal() {
+            const modal = document.getElementById('enrollmentModal');
+            modal.classList.add('hidden');
+        }
+
+        // Handle Main Page Form Submit
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const name = document.getElementById('formName').value.trim();
+            const phone = document.getElementById('formPhone').value.trim();
+            const course = document.getElementById('formCourse').value;
+            const session = document.getElementById('formSession').value;
+            const message = document.getElementById('formMessage').value.trim();
+
+            const textPayload = `Hello Smart Skills Academy Qalagay! %0A I wish to enroll into the ${course} course.%0AStudent Name: ${name}%0AMy WhatsApp: ${phone}%0APreferred Session: ${session}%0AMy Query: ${message}`;
+            
+            // Setup target link
+            const waUrl = `https://wa.me/923470983567?text=${textPayload}`;
+            
+            // Show custom success state
+            document.getElementById('successWhatsAppBtn').href = waUrl;
+            document.getElementById('enquiryForm').classList.add('hidden');
+            document.getElementById('enquirySuccess').classList.remove('hidden');
+        }
+
+        // Handle Overlay Modal Form Submit
+        function handleModalSubmit(event) {
+            event.preventDefault();
+            const name = document.getElementById('modalName').value.trim();
+            const phone = document.getElementById('modalPhone').value.trim();
+            const course = document.getElementById('modalCourse').value;
+
+            const textPayload = `Hello Smart Skills Academy Qalagay!%0A I want to register via the website.%0AStudent Name: ${name}%0APhone: ${phone}%0ACourse: ${course}`;
+            
+            // Send direct to Admin 1
+            const waUrl = `https://wa.me/923470983567?text=${textPayload}`;
+            window.open(waUrl, '_blank');
+            closeEnrollmentModal();
+        }
+    </script>
+</body>
+</html>
