@@ -46,7 +46,7 @@
         }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-900 font-sans antialiased selection:bg-academyBlue-500 selection:text-white">
+<body class="bg-slate-50 text-slate-900 font-sans antialiased overflow-x-hidden selection:bg-academyBlue-500 selection:text-white">
 
     <!-- TOP NOTIFICATION & CONTACT BAR -->
     <div class="bg-gradient-to-r from-academyBlue-900 via-blue-900 to-academyRed-600 text-white text-xs md:text-sm py-2 px-4 sticky top-0 z-50 transition-all duration-300">
@@ -102,6 +102,10 @@
                 <a href="#verify-certificate" class="hover:text-academyBlue-500 transition-colors flex items-center gap-1 text-academyRed-500"><i class="fa-solid fa-circle-check"></i> Certificate Verification</a>
             </nav>
 
+            <button type="button" onclick="toggleMobileNav()" class="lg:hidden inline-flex items-center justify-center p-3 rounded-xl border border-slate-200 text-slate-700 hover:bg-slate-100 transition-all">
+                <i class="fa-solid fa-bars text-lg"></i>
+            </button>
+
             <!-- CTA Actions -->
             <div class="flex items-center gap-3">
                 <a href="#contact" class="hidden sm:inline-flex items-center justify-center px-4 py-2 border border-slate-200 rounded-xl text-sm font-semibold text-slate-700 hover:bg-slate-50 transition-all">
@@ -114,11 +118,25 @@
         </div>
     </header>
 
+    <div id="mobileNav" class="lg:hidden hidden bg-white border-b border-slate-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 space-y-3">
+            <a href="#about" onclick="toggleMobileNav()" class="block text-slate-700 font-semibold rounded-xl px-4 py-3 hover:bg-slate-50 transition">About</a>
+            <a href="#courses" onclick="toggleMobileNav()" class="block text-slate-700 font-semibold rounded-xl px-4 py-3 hover:bg-slate-50 transition">Our Courses</a>
+            <a href="#durations" onclick="toggleMobileNav()" class="block text-slate-700 font-semibold rounded-xl px-4 py-3 hover:bg-slate-50 transition">Duration</a>
+            <a href="#why-choose-us" onclick="toggleMobileNav()" class="block text-slate-700 font-semibold rounded-xl px-4 py-3 hover:bg-slate-50 transition">Why Choose Us?</a>
+            <a href="#verify-certificate" onclick="toggleMobileNav()" class="block text-academyRed-500 font-semibold rounded-xl px-4 py-3 hover:bg-slate-50 transition">Certificate Verification</a>
+            <div class="flex flex-col sm:flex-row gap-3 pt-3">
+                <a href="#contact" onclick="toggleMobileNav()" class="w-full inline-flex items-center justify-center px-4 py-3 border border-slate-200 rounded-xl text-sm font-semibold text-slate-700 hover:bg-slate-50 transition">Find Location</a>
+                <button onclick="openEnrollmentModal(); toggleMobileNav();" class="w-full inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-academyRed-500 to-red-600 text-white font-bold rounded-xl text-sm hover:from-academyRed-600 hover:to-red-700 transition">Enroll Now</button>
+            </div>
+        </div>
+    </div>
+
     <!-- HERO SECTION -->
     <section class="relative overflow-hidden bg-gradient-to-b from-slate-100 via-white to-slate-50 py-16 lg:py-24">
         <!-- Abstract background accents -->
-        <div class="absolute inset-y-0 right-0 w-1/2 bg-blue-50/40 rounded-l-[150px] transform translate-x-32 -z-10 blur-3xl"></div>
-        <div class="absolute top-1/2 left-10 w-48 h-48 bg-red-100/30 rounded-full -z-10 blur-2xl"></div>
+        <div class="hidden md:block absolute inset-y-0 right-0 w-1/2 bg-blue-50/40 rounded-l-[150px] transform translate-x-32 -z-10 blur-3xl"></div>
+        <div class="hidden md:block absolute top-1/2 left-10 w-48 h-48 bg-red-100/30 rounded-full -z-10 blur-2xl"></div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
@@ -649,6 +667,85 @@
         </div>
     </section>
 
+    <!-- TEAM / ADMIN SECTION -->
+    <section id="team" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <span class="text-sm font-bold text-academyRed-500 tracking-widest uppercase">TEACHERS</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-academyBlue-900 tracking-tight">Meet our professional team</h2>
+                <p class="text-slate-500 text-sm sm:text-base">Experienced instructors guide students through practical lessons, real projects, and academic support.</p>
+            </div>
+
+            <div class="grid gap-8 lg:grid-cols-2 items-start">
+                <div class="bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-xl">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=900&q=80" alt="Rashid Zada" loading="lazy" class="w-full h-[420px] object-cover" />
+                    </div>
+                    <div class="p-8">
+                        <span class="inline-flex items-center px-3 py-1 rounded-full bg-academyBlue-100 text-academyBlue-900 text-[11px] font-bold uppercase tracking-widest">Admin 1</span>
+                        <h3 class="mt-5 text-2xl font-extrabold text-academyBlue-900">Rashid Zada</h3>
+                        <p class="mt-2 text-sm text-slate-500">Full Stack Developer & Student Support</p>
+                        <div class="mt-6 grid gap-3 text-sm text-slate-600">
+                            <div class="flex items-center gap-3">
+                                <span class="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-slate-100 text-academyBlue-900 font-bold">ED</span>
+                                <span class="font-semibold">Education:</span>
+                                <span>MCS, M.Ed, BS-English</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-slate-100 text-academyBlue-900 font-bold">UN</span>
+                                <span class="font-semibold">University:</span>
+                                <span>Swat University</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-slate-100 text-academyBlue-900 font-bold">XP</span>
+                                <span class="font-semibold">Experience:</span>
+                                <span>5+ years teaching</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-slate-100 text-academyBlue-900 font-bold">📞</span>
+                                <span class="font-semibold">Contact:</span>
+                                <a href="tel:03470983567" class="text-academyRed-500 hover:text-red-600">0347-0983567</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-xl">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=900&q=80" alt="Rahmat Ali" loading="lazy" class="w-full h-[420px] object-cover" />
+                    </div>
+                    <div class="p-8">
+                        <span class="inline-flex items-center px-3 py-1 rounded-full bg-emerald-100 text-emerald-900 text-[11px] font-bold uppercase tracking-widest">Admin 2</span>
+                        <h3 class="mt-5 text-2xl font-extrabold text-academyBlue-900">Rahmat Ali</h3>
+                        <p class="mt-2 text-sm text-slate-500">English Language Specialist & Student Advisor</p>
+                        <div class="mt-6 grid gap-3 text-sm text-slate-600">
+                            <div class="flex items-center gap-3">
+                                <span class="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-slate-100 text-academyBlue-900 font-bold">ED</span>
+                                <span class="font-semibold">Education:</span>
+                                <span>BS-English, B.Ed</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-slate-100 text-academyBlue-900 font-bold">UN</span>
+                                <span class="font-semibold">University:</span>
+                                <span>Swat University</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-slate-100 text-academyBlue-900 font-bold">XP</span>
+                                <span class="font-semibold">Experience:</span>
+                                <span>5+ years teaching</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-slate-100 text-academyBlue-900 font-bold">💬</span>
+                                <span class="font-semibold">WhatsApp:</span>
+                                <a href="https://wa.me/923115252698" target="_blank" class="text-academyRed-500 hover:text-red-600">0311-5252698</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- CONTACT & LOCATION SECTION -->
     <section id="contact" class="py-20 bg-slate-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -966,6 +1063,13 @@
         function closeEnrollmentModal() {
             const modal = document.getElementById('enrollmentModal');
             modal.classList.add('hidden');
+        }
+
+        function toggleMobileNav() {
+            const nav = document.getElementById('mobileNav');
+            if (nav) {
+                nav.classList.toggle('hidden');
+            }
         }
 
         // Handle Main Page Form Submit
